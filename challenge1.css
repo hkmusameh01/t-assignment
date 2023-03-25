@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --body_bg: #c5c5c5;
+  --primary: #8132a3;
+  --light: #eeeeee;
+  --white: #ffffff;
+  --black: #000000;  
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  background-color: var(--body_bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--white);
+  position: relative;
+  width: 250px;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background-color: var(--primary);
+  top: 0;
+  left: 0;
+}
+
+.card .image-container {
+  padding: 1.2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.card .image-container img {
+  display: block;
+  width: 150px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  box-shadow: 0 0 8px 4px var(--light);
+}
+
+.card > label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card > input {
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  border: 0;
+  padding-bottom: .4rem;
+  margin-bottom: .5rem;
+}
+
+.card > input:not(:last-child) {
+  border-bottom: 1px solid var(--light);
+}
